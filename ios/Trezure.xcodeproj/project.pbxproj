@@ -24,6 +24,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Trezure;
 		};
+		9341CDCF2A9916190093DD41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9341CDCB2A9916190093DD41 /* AirMaps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
+			remoteInfo = AirMaps;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +50,7 @@
 		75297BE7CEA67023992C41A2 /* Pods-Trezure-TrezureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trezure-TrezureTests.debug.xcconfig"; path = "Target Support Files/Pods-Trezure-TrezureTests/Pods-Trezure-TrezureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Trezure/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87DE33E0DE4CA358ECEE8B75 /* libPods-Trezure-TrezureTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trezure-TrezureTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9341CDCB2A9916190093DD41 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -109,6 +117,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9341CDCB2A9916190093DD41 /* AirMaps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -133,6 +142,14 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Trezure.app */,
 				00E356EE1AD99517003FC87E /* TrezureTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9341CDCC2A9916190093DD41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9341CDD02A9916190093DD41 /* libAirMaps.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +240,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9341CDCC2A9916190093DD41 /* Products */;
+					ProjectRef = 9341CDCB2A9916190093DD41 /* AirMaps.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* Trezure */,
@@ -230,6 +253,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9341CDD02A9916190093DD41 /* libAirMaps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAirMaps.a;
+			remoteRef = 9341CDCF2A9916190093DD41 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -433,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75297BE7CEA67023992C41A2 /* Pods-Trezure-TrezureTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -460,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 42CF8563388E4639E51CB27A /* Pods-Trezure-TrezureTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TrezureTests/Info.plist;

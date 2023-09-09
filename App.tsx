@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Geolocation from 'react-native-geolocation-service';
 
-import GameMap from './components/map/GameMap';
-
+import HuntMap from './components/map/HuntMap';
 
 const Stack = createNativeStackNavigator();
 
 const App = (): JSX.Element => {
+  const [initialUserLocation, setInitialUserLocation] = useState({} as Geolocation.GeoPosition)
+  
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
           name="Home"
-          component={GameMap}
-          options={{ title: 'Map' }}
+          component={HuntMap}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

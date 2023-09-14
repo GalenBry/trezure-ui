@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Geolocation from 'react-native-geolocation-service';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import HuntMap from './components/map/HuntMap';
 
-const Stack = createNativeStackNavigator();
-
+const Drawer = createDrawerNavigator();
 const App = (): JSX.Element => {
-  const [initialUserLocation, setInitialUserLocation] = useState({} as Geolocation.GeoPosition)
-  
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+      <Drawer.Navigator>
+        <Drawer.Screen
           name="Home"
           component={HuntMap}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false
+          }}
         />
-      </Stack.Navigator>
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }
